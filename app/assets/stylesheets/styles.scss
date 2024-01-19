@@ -1,0 +1,16 @@
+@import "header";
+
+// styles.scss
+
+$primary-color: #fdf8e1;
+$secondary-color: #7d7c7a;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+
+
+// Add more styles as needed
