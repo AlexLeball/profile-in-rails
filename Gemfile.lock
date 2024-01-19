@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/heartcombo/simple_form.git
+  revision: 8f77f598b32ed11b0d56c44481607a6e911bcecb
+  specs:
+    simple_form (5.3.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,11 +85,16 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    autoprefixer-rails (10.4.16.0)
+      execjs (~> 2)
     base64 (0.2.0)
     bigdecimal (3.1.6)
     bindex (0.8.1)
     bootsnap (1.17.1)
       msgpack (~> 1.2)
+    bootstrap (5.3.2)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.8, < 3)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -103,7 +116,10 @@ GEM
       ruby2_keywords
     error_highlight (0.6.0)
     erubi (1.12.0)
+    execjs (2.9.1)
     ffi (1.16.3)
+    font-awesome-sass (6.5.1)
+      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -155,6 +171,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
+    popper_js (2.11.8)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -267,16 +284,20 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  autoprefixer-rails
   bootsnap
+  bootstrap (~> 5.2)
   capybara
   debug
   error_highlight (>= 0.4.0)
+  font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
   puma (>= 5.0)
   rails (~> 7.1.2)
   sassc-rails
   selenium-webdriver
+  simple_form!
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

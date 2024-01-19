@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #e26d5c;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar-name {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding-left: 30px;
+}
+
+.navigate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav-item {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  list-style: none;
+}
