@@ -7,7 +7,7 @@
 // styles.scss
 
 $primary-color:#fffcf2;
-$secondary-color: #494331;
+$secondary-color: #e26d5c;
 
 body {
   font-family: 'Arial', sans-serif;
@@ -27,6 +27,11 @@ body {
     background-color: darken($secondary-color, 10%);
   }
   text-decoration: none;
+}
+
+footer {
+  text-align: end;
+  padding-right: 10px;
 }
 
 
