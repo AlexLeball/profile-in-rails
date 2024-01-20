@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "portfolio", to: "pages#portfolio"
   get "contact", to: "pages#contact"
-
+  resources :blog_posts
   # Defines the root path route ("/")
   # root "posts#index"
 end
