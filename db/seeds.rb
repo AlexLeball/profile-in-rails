@@ -8,16 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# Create a default admin user
+Admin.destroy_all
+BlogPost.destroy_all
+
+puts "creating admin user..."
 Admin.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 puts "admin user created"
-# db/seeds.rb
 puts "creating blog posts..."
-
-# Create some sample blog posts
-# db/seeds.rb
-
-# Assuming you have image files in app/assets/images/
 image1_path = Rails.root.join('app', 'assets', 'images', 'alex.jpg')
 image2_path = Rails.root.join('app', 'assets', 'images', 'alex close.jpg')
 image3_path = Rails.root.join('app', 'assets', 'images', 'closer.jpg')
