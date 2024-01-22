@@ -1,19 +1,31 @@
-<h1><%= @blog_post.title %></h1>
+<%= render partial: 'navbar/navbar' %>
 
-<p><%= @blog_post.body %></p>
+<div class="blog-post">
 
-<% if @blog_post.photo.attached? %>
-  <%= image_tag @blog_post.photo %>
-<% end %>
+  <div class="blog-photo">
+    <% if @blog_post.photo.attached? %>
+      <%= image_tag @blog_post.photo, width: 500, height: 400, fit: :fill %>
+      <br>
+      <%= alt="image relating to the blog"%>
+    <% end %>
+  </div>
 
-<% if can_edit? %>
-  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
-<% end %>
-
-<% if can_edit? %>
-<%= link_to 'delete', blog_post_path(@blog_post), data: { turbo_method: :delete } %>
-<% end %>
+  <div class="post">
+    <h1><%= @blog_post.title %></h1>
+    <p><%= @blog_post.body %></p>
+    <p><%= @blog_post.created_at.strftime("%B %e, %Y") %></p>
+  </div>
 
 
+    <% if can_edit? %>
+      <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
+    <% end %>
 
-<%= link_to 'Back to Blog Posts', blog_posts_path %>
+    <% if can_edit? %>
+      <%= link_to 'delete', blog_post_path(@blog_post), data: { turbo_method: :delete } %>
+    <% end %>
+
+    <%= link_to 'Back to Blog Posts', blog_posts_path %>
+
+
+</div>

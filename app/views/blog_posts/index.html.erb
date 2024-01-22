@@ -1,12 +1,17 @@
-<h1>Welcome to my blog</h1>
-
-<% if @blog_posts.present? %>
-  <% @blog_posts.each do |blog_post| %>
-    <div>
-      <h2><%= link_to blog_post.title, blog_post %></h2>
-      <p><%= blog_post.body %></p>
-    </div>
-  <% end %>
-<% else %>
-  <p>No blog posts available.</p>
-<% end %>
+<%= render partial: 'navbar/navbar' %>
+  <h1>Welcome to my blog</h1>
+  <p>Here you will find my latest blog posts.</p>
+  <br>
+  <div class="blog-index">
+    <% if @blog_posts.present? %>
+      <% @blog_posts.each do |blog_post| %>
+        <div>
+          <%= image_tag blog_post.photo, width: 400, height: 350, fit: :fill, alt: "image relating to the blog" %>
+          <br>
+          <h2><%= link_to blog_post.title, blog_post %></h2>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No blog posts available.</p>
+    <% end %>
+</div>
