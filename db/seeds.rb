@@ -15,8 +15,35 @@ puts "admin user created"
 puts "creating blog posts..."
 
 # Create some sample blog posts
-BlogPost.new(title: 'First Blog Post', body: 'This is the content of the first blog post.', published_at: Time.now )
-BlogPost.new(title: 'Second Blog Post', body: 'Another exciting blog post with some content.', published_at: Time.now)
-BlogPost.new(title: 'Third Blog Post', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', published_at: Time.now)
+# db/seeds.rb
+
+# Assuming you have image files in app/assets/images/
+image1_path = Rails.root.join('app', 'assets', 'images', 'alex.jpg')
+image2_path = Rails.root.join('app', 'assets', 'images', 'alex close.jpg')
+image3_path = Rails.root.join('app', 'assets', 'images', 'closer.jpg')
+
+# Create some sample blog posts with attached images
+blog_post1 = BlogPost.create(
+  title: 'First Blog Post',
+  body: 'This is the content of the first blog post.',
+  published_at: Time.now
+)
+blog_post1.image.attach(io: File.open(image1_path), filename: 'alex.jpg')
+
+blog_post2 = BlogPost.create(
+  title: 'Second Blog Post',
+  body: 'Another exciting blog post with some content.',
+  published_at: Time.now
+)
+blog_post2.image.attach(io: File.open(image2_path), filename: 'alex close.jpg')
+
+blog_post3 = BlogPost.create(
+  title: 'Third Blog Post',
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  published_at: Time.now
+)
+blog_post3.image.attach(io: File.open(image3_path), filename: 'closer.jpg')
+
+puts 'Seed data created successfully!'
 
 puts 'Seed data created successfully!'

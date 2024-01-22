@@ -64,6 +64,8 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem 'devise'
+gem 'activestorage', '~> 7.0'
+gem "image_processing", ">= 1.2"
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
