@@ -63,7 +63,6 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem 'devise'
 gem 'activestorage', '~> 7.0'
-gem "cloudinary"
 gem 'kaminari', '~> 1.2'
 
 group :test do
