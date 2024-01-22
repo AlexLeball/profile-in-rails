@@ -10,7 +10,7 @@
           <div class="blog-card">
             <%= image_tag blog_post.photo, width: 280, fit: :fill, alt: "image relating to the blog" %>
             <br>
-            <h2><%= link_to blog_post.title, blog_post %></h2>
+            <h2 style="text-decoration: none"><%= link_to blog_post.title, blog_post %></h2>
             <p><%= truncate(blog_post.body, length: 150) %></p>
           </div>
         <% end %>
