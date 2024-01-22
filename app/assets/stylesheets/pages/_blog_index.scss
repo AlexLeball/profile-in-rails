@@ -1,7 +1,61 @@
-.blog-index {
-  display: flex;
+//Introduction style
+.index-info{
   text-align: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  margin-top: 30px;
+  h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+
+//pagnation style
+.page-changer{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.pagination {
+  background: #fff; /* Light background color */
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.pagination a,
+.pagination span {
+  padding:2px; /* Adjusted padding for a softer look */
+  margin: 7px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .disabled {
+  color: #d3d3d3; /* Light gray for disabled elements */
+}
+
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #e26d5c;/* Pink background for the current element */
+  color: white; /* White text color for better visibility */
+  padding:15px; /* Adjusted padding for a softer look */
+  margin: 7px;
+  border-radius: 5px; /* Adjusted border-radius for a softer look */
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #e26d5c; /* Pink text color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.pagination a:hover {
+  color: #b84533; /* Darker pink on hover */
 }

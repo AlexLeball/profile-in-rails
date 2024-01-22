@@ -1,17 +1,26 @@
 <%= render partial: 'navbar/navbar' %>
-  <h1>Welcome to my blog</h1>
-  <p>Here you will find my latest blog posts.</p>
-  <br>
-  <div class="blog-index">
-    <% if @blog_posts.present? %>
-      <% @blog_posts.each do |blog_post| %>
-        <div>
-          <%= image_tag blog_post.photo, width: 400, height: 350, fit: :fill, alt: "image relating to the blog" %>
-          <br>
-          <h2><%= link_to blog_post.title, blog_post %></h2>
-        </div>
+<div class="container">
+  <div class="index-info">
+    <h1>Welcome to my blog</h1>
+    <p>Here you can find all my blog posts. I write about my experiences as a developer, my projects and other things that I find interesting.</p>
+  </div>
+    <div class="blog-index">
+      <% if @blog_posts.present? %>
+        <% @blog_posts.each do |blog_post| %>
+          <div class="blog-card">
+            <%= image_tag blog_post.photo, width: 280, fit: :fill, alt: "image relating to the blog" %>
+            <br>
+            <h2><%= link_to blog_post.title, blog_post %></h2>
+            <p><%= truncate(blog_post.body, length: 150) %></p>
+          </div>
+        <% end %>
+      <% else %>
+        <p>No blog posts available.</p>
       <% end %>
-    <% else %>
-      <p>No blog posts available.</p>
-    <% end %>
+    </div>
+  <div class="page-changer">
+    <div class="pagination">
+      <%= paginate @blog_posts%>
+    </div>
+  </div>
 </div>

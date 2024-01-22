@@ -16,7 +16,6 @@
     <p><%= @blog_post.created_at.strftime("%B %e, %Y") %></p>
   </div>
 
-
     <% if can_edit? %>
       <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
     <% end %>

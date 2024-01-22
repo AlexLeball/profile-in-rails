@@ -64,7 +64,8 @@ gem "sassc-rails"
 gem 'devise'
 gem 'activestorage', '~> 7.0'
 gem "cloudinary"
-gem "kaminari"
+gem 'kaminari', '~> 1.2'
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
