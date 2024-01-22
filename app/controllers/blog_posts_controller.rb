@@ -39,6 +39,13 @@ class BlogPostsController < ApplicationController
     end
   end
 
+  def destroy
+    can_edit?
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.destroy
+    redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.'
+  end
+
   private
 
   def blog_post_params
