@@ -28,21 +28,21 @@ blog_post1 = BlogPost.create(
   body: 'This is the content of the first blog post.',
   published_at: Time.now
 )
-blog_post1.image.attach(io: File.open(image1_path), filename: 'alex.jpg')
+blog_post1.photo.attach(io: File.open(image1_path), filename: 'alex.jpg')
 
 blog_post2 = BlogPost.create(
   title: 'Second Blog Post',
   body: 'Another exciting blog post with some content.',
   published_at: Time.now
 )
-blog_post2.image.attach(io: File.open(image2_path), filename: 'alex close.jpg')
+blog_post2.photo.attach(io: File.open(image2_path), filename: 'alex close.jpg')
 
 blog_post3 = BlogPost.create(
   title: 'Third Blog Post',
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   published_at: Time.now
 )
-blog_post3.image.attach(io: File.open(image3_path), filename: 'closer.jpg')
+blog_post3.photo.attach(io: File.open(image3_path), filename: 'closer.jpg')
 
 puts 'Seed data created successfully!'
 

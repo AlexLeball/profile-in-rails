@@ -6,4 +6,8 @@
   <%= image_tag @blog_post.photo %>
 <% end %>
 
+<% if can_edit? %>
+  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
+<% end %>
+
 <%= link_to 'Back to Blog Posts', blog_posts_path %>
