@@ -6,7 +6,7 @@ class BlogPostsController < ApplicationController
 
   def index
     @blog_posts = BlogPost.all
-    @blog_posts = BlogPost.order(published_at: :desc).page(params[:page])
+    @blog_posts = BlogPost.order(published_at: :desc).page(params[:page]).per 6
   end
 
   def show
@@ -19,7 +19,6 @@ class BlogPostsController < ApplicationController
 
   def create
     @blog_post = BlogPost.new(blog_post_params)
-
     if @blog_post.save
       redirect_to @blog_post, notice: 'Blog post was successfully created.'
     else
@@ -33,6 +32,9 @@ class BlogPostsController < ApplicationController
 
   def update
     can_edit?
+
+    @blog_post = BlogPost.find(params[:id])
+
     if @blog_post.update(blog_post_params)
       redirect_to @blog_post, notice: 'Blog post was successfully updated.'
     else

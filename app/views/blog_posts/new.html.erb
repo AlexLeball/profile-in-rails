@@ -1,23 +1,25 @@
 <h1>New Blog Post</h1>
-
 <%= form_with(model: @blog_post, url: blog_posts_path, method: :post, local: true) do |form| %>
-  <div>
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control', placeholder: 'Enter the title' %>
+    <small class="text-danger"><%= form.object.errors.full_messages_for(:title).join(', ') %></small>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: 'form-control', placeholder: 'Write your blog post here', class: "input-text"%>
+    <small class="text-danger"><%= form.object.errors.full_messages_for(:body).join(', ') %></small>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :photo %>
-    <%= form.file_field :photo %>
+    <%= form.file_field :photo, class: 'form-control' %>
+    <small class="text-danger"><%= form.object.errors.full_messages_for(:photo).join(', ') %></small>
   </div>
 
-  <div>
-    <%= form.submit 'Create Blog Post' %>
+  <div class="form-group">
+    <%= form.submit 'Create Blog Post', class: 'btn btn-primary' %>
   </div>
 <% end %>
 
