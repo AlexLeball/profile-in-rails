@@ -1,9 +1,14 @@
 <%= render partial: 'navbar/navbar' %>
-
 <div class="about">
-<br>
-<h1><strong>a bit about me...</strong></h1>
-<br>
+  <div class="about-title">
+    <h1><strong>
+      <div data-controller="typing-animation" data-target="typing-animation.text">
+        <%= "a bit about me..."%>
+      </div>
+    </strong></h1>
+  </div>
+
+  <br>
   <div class="information">
     <%= image_tag("profile.jpg", alt: "Profile Image", height: 500, width: 400, crop: :fill, class: "profilepic") %>
       <div class="description">
