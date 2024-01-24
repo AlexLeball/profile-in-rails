@@ -1,14 +1,18 @@
 <%= render partial: 'navbar/navbar' %>
 
-<h1 class="git-title">My Other Work</h1>
+<h1 class="git-title">
+  <div data-controller="typing-animation" data-target="typing-animation.text">
+    <%= "My Other Work"%>
+  </div>
+</h1>
 <div class="portfolio">
   <div class="git-image">
     <%= image_tag("github-mark.png", alt: "github", class: "github") %>
     <div class="github-info">
       <h2>My GitHub</h2>
       <p>Explore my GitHub profile for a collection of diverse repositories:</p>
-      <%= link_to "See My Github", "https://github.com/AlexLeball", class: "btn-github" %>
       <p>Discover a variety of projects spanning coding exercises, personal projects, and contributions to open source.</p>
+      <%= link_to "See My Github", "https://github.com/AlexLeball", class: "btn-github" %>
     </div>
   </div>
 </div>
@@ -19,11 +23,11 @@
           <%= image_tag("nft.png", height: 300, width: 450,  fit: :fill, alt: "image of NFT mockup site") %>
         </div>
         <br>
-        <h2>NFTandB - Airbnb Clone</h2>
+        <h2>NFTandB</h2>
           <br>
           <p>Experience a unique twist on the traditional Airbnb platform with NFTandB:</p>
-          <p><a href="https://airbnb-amedeo1997-145b8e1565bd.herokuapp.com/" target="_blank">https://airbnb-amedeo1997-145b8e1565bd.herokuapp.com/</a></p>
           <p>This project is an Airbnb clone tailored for buying and selling NFTs, blending the familiarity of an Airbnb style interface with the exciting world of non-fungible tokens.</p>
+          <%= link_to "See The Site", "https://airbnb-amedeo1997-145b8e1565bd.herokuapp.com/", class: "blue-button"%>
       </div>
 
       <div class="another-section">
@@ -31,11 +35,11 @@
           <%= image_tag("amigos.jpg", height: 300, width: :auto, fit: :fill, alt: "image of amigoes landing page") %>
         </div>
         <br>
-          <h2>Amigoes - Social Media</h2>
+          <h2>Amigoes</h2>
         <br>
           <p>Experience a unique social platform designed for retirees with Amigoes (mobile app only):</p>
-          <p><a href="https://amigoes-66dfd68e1e8b.herokuapp.com/" target="_blank">https://amigoes-66dfd68e1e8b.herokuapp.com/</a></p>
           <p>Although the project is now closed, Amigoes aimed to provide a tailored social media experience for retirees, fostering connections and shared experiences in their post-work adventures.</p>
+          <%= link_to "See The Site", "https://amigoes-66dfd68e1e8b.herokuapp.com/", class: "blue-button"%>
       </div>
     </div>
   </div>
