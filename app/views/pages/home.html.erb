@@ -12,11 +12,12 @@
     <div class="header-info">
       <div class="writing">
         <h1>Alexandra Leballeur <br>Website Development and Design</h1>
-        <p>Take your online presence to the next level with a beautiful and reactive site</p>
-      </div>
+        <div data-controller="typing-animation" data-typing-animation-target="text">
+          <%= "Take your online presence to the next level with a beautiful and reactive site"%>
+        </div>
     </div>
-    <%= link_to "See more about me", about_path, class: "btn" %>
   </div>
+  <%= link_to "See more about me", about_path, class: "btn" %>
 
   <footer>
       &copy; 2024 Alexandra Leballeur
