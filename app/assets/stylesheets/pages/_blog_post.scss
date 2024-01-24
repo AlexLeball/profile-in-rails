@@ -37,3 +37,17 @@
   height: 1000px;
   width: 100%;
 }
+
+.btn-blog {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 20px;
+  background-color: #e26d5c;
+  color: white;
+  padding: 15px;
+  margin: 7px;
+  border-radius: 5px;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
