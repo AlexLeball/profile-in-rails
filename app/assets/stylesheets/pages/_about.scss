@@ -1,3 +1,29 @@
+@media (max-width: 768px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about h1,
+  .about .h1 {
+    margin-bottom: 5px !important;
+    font-size: 40px !important;
+  }
+
+  .profilepic {
+    height: 300px;
+    width: 240px;
+  }
+
+  .description {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+
 .about {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,7 +70,7 @@
   padding: 40px;/* Set the direction to row to place items horizontally *//* Adjust as needed */
 }
 
-.beliefs h1{
+.beliefs h2{
   font-size: 50px;
   text-align: left;
   margin-bottom: 20px;

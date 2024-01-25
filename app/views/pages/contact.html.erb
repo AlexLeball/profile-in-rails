@@ -1,3 +1,8 @@
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "Contact" %></title>
+  <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Alexandra Leballeur- Web Developer, improve your online presence with a beautiful site' %>">
+</head>
+
 <%= render partial: 'navbar/navbar' %>
 <div class="contact">
   <h1>Contact</h1>

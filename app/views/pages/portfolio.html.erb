@@ -1,13 +1,18 @@
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "My Portfolio" %></title>
+  <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Alexandra Leballeur- Web Developer, improve your online presence with a beautiful site' %>">
+</head>
 <%= render partial: 'navbar/navbar' %>
 
 <h1 class="git-title">
   <div data-controller="typing-animation" data-typing-animation-target="text">
-    <%= "My Other Work"%>
+    <%= "My Other Work" %>
   </div>
 </h1>
+
 <div class="portfolio">
   <div class="git-image">
-    <%= image_tag("github-mark.png", alt: "github", class: "github") %>
+    <%= image_tag("github-mark.png", alt: "GitHub", class: "github") %>
     <div class="github-info">
       <h2>My GitHub</h2>
       <p>Explore my GitHub profile for a collection of diverse repositories:</p>
@@ -16,34 +21,35 @@
     </div>
   </div>
 </div>
-  <div class="portfolio-background">
-    <div class="portfolio-container">
-      <div class="portfolio-item">
-        <div class="image-portfoliio">
-          <%= image_tag("nft.png", height: 300, width: 450,  fit: :fill, alt: "image of NFT mockup site") %>
-        </div>
-        <br>
-        <h2>NFTandB</h2>
-          <br>
-          <p>Experience a unique twist on the traditional Airbnb platform with NFTandB:</p>
-          <p>
-          This project endeavored to adopt the user-friendly design principles of Airbnb while applying them to a unique context, allowing users to rent out Non-Fungible Tokens (NFTs).</p>
-          <%= link_to "See The Site", "https://airbnb-amedeo1997-145b8e1565bd.herokuapp.com/", class: "blue-button"%>
-      </div>
 
-      <div class="another-section">
-        <div class="image-portfoliio">
-          <%= image_tag("amigos.jpg", height: 300, width: :auto, fit: :fill, alt: "image of amigoes landing page") %>
-        </div>
-        <br>
-          <h2>Amigoes</h2>
-        <br>
-          <p>Experience a unique social platform designed for retirees with Amigoes (mobile app only):</p>
-          <p>Although the project is now closed, Amigoes aimed to provide a tailored social media experience for retirees, fostering connections and shared experiences in their post-work adventures.</p>
-          <%= link_to "See The Site", "https://amigoes-66dfd68e1e8b.herokuapp.com/", class: "blue-button"%>
+<div class="portfolio-background">
+  <div class="portfolio-container">
+    <div class="portfolio-item">
+      <div class="image-portfolio">
+        <%= image_tag("nft.png", height: 300, width: 450, fit: :fill, alt: "Image of NFT mockup site") %>
       </div>
+      <br>
+      <h2>NFTandB</h2>
+      <br>
+      <p>Experience a unique twist on the traditional Airbnb platform with NFTandB:</p>
+      <p>This project endeavored to adopt the user-friendly design principles of Airbnb while applying them to a unique context, allowing users to rent out Non-Fungible Tokens (NFTs).</p>
+      <%= link_to "See The Site", "https://airbnb-amedeo1997-145b8e1565bd.herokuapp.com/", class: "blue-button" %>
+    </div>
+
+    <div class="another-section">
+      <div class="image-portfolio">
+        <%= image_tag("amigos.jpg", height: 300, width: :auto, fit: :fill, alt: "Image of Amigoes landing page") %>
+      </div>
+      <br>
+      <h2>Amigoes</h2>
+      <br>
+      <p>Experience a unique social platform designed for retirees with Amigoes (mobile app only):</p>
+      <p>Although the project is now closed, Amigoes aimed to provide a tailored social media experience for retirees, fostering connections and shared experiences in their post-work adventures.</p>
+      <%= link_to "See The Site", "https://amigoes-66dfd68e1e8b.herokuapp.com/", class: "blue-button" %>
     </div>
   </div>
+</div>
+
 <footer>
-    &copy; 2024 Alexandra Leballeur
+  &copy; 2024 Alexandra Leballeur
 </footer>
