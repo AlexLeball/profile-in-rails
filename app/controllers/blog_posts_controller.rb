@@ -5,12 +5,7 @@ class BlogPostsController < ApplicationController
 
 
   def index
-    @blog_posts = BlogPost.all
-    @blog_posts = BlogPost.order(published_at: :desc).page(params[:page]).per 6
-  end
-
-  def show
-    # Already set by before_action
+    @blog_posts = BlogPost.order(published_at: :desc).page(params[:page]).per(6)
   end
 
   def new
