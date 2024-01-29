@@ -33,3 +33,12 @@
     color: #494331;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #banner {
+    height: 500px;
+  }
+  .header-info {
+    font-size: 20px;
+  }
+}

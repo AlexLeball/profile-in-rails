@@ -43,3 +43,42 @@
     margin-top: 20px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .contact {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  #blurb {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 100px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 90px;
+    margin-bottom: 120px;
+    margin-right: 50px;
+
+    .email:hover,
+    .linkedin:hover {
+      position: relative;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f5a497ad;
+    }
+
+    p {
+      color: black;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+  
+}
