@@ -34,7 +34,6 @@
 .git-title {
   font-size: 50px;
   font-weight: bold;
-  color: #e26d5c;
   text-align: center;
   margin-top: 40px;
   height: 50px;
@@ -125,12 +124,6 @@
 
 
 @media screen and (max-width: 768px) {
-  .portfolio {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-  }
 
   .git-title {
     font-size: 20px;
@@ -144,7 +137,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0px;
   }
 
   .portfolio-container {
@@ -157,7 +149,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 60%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .portfolio-item {
