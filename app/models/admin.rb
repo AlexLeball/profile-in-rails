@@ -11,4 +11,5 @@ class Admin < ApplicationRecord
       errors.add(:base, "You can't create more than two admins")
     end
   end
+
 end
