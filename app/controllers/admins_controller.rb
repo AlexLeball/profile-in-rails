@@ -2,6 +2,16 @@ class AdminsController < ApplicationController
   before_action :authenticate_admin!
   before_action :authorize_admin, only: [:edit, :update]
 
+  def create
+    @admin = Admin.new(admin_params)
+
+    if @admin.save
+      redirect_to @admin, notice: 'Admin created successfully.'
+    else
+      render :new
+    end
+  end
+
   def edit
     @admin = current_admin
   end

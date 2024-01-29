@@ -3,7 +3,6 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update]
   helper_method :can_edit?
 
-
   def index
     @blog_posts = BlogPost.order(published_at: :desc).page(params[:page]).per(6)
   end
