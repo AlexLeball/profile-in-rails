@@ -25,37 +25,51 @@
       class: "profilepic"
     ) %>
 
-    <div class="description">
-      <p>
-        <strong>Hi, I'm Alex.</strong>
-        I'm a female web developer originally from Australia but currently calling France my home. With a diverse background, I hold degrees in both psychology and sociology, alongside my expertise in web development. This unique blend of knowledge allows me to approach projects with a well-rounded perspective, understanding both the technical aspects and the human dynamics involved.
-        My journey into the world of coding began when I delved into the realm of accessibility in technology while completing a review of government websites during my sociology degree. Witnessing the power inclusive design had to promote social autonomy, I discovered a passion for coding as a means to create accessible and user-friendly digital experiences.
-        This idea sparked my pursuit of a career in web development, where I could leverage technology to bridge gaps in our communities and make the online world more inclusive. Two years after this, I have received a diploma in Fullstack development and have accrued profound knowledge along the way.
-        Outside of the digital realm, I am an avid traveler, language learner, knitter, and cooking enthusiast. I am also passionate about the environment and am currently on a personal journey to create a more planet-friendly wardrobe through the process of learning to sew and upcycle pre-existing clothes.
-        Beyond my personal interests, I'm deeply committed to promoting diversity and inclusivity in the tech industry. The importance of having a wide range of people bringing with them their own perspectives and lived-experiences provides a unique and valuable richness to the industry. Through my work and passions, I aim to contribute to a world where diverse voices and talents are celebrated and empowered.
-      </p>
-    </div>
+  <div data-controller="toggle" class="description">
+      <div class="visible-part">
+          <p>
+              <strong>Hi, I'm Alex.</strong>
+              I'm a female web developer originally from Australia but currently calling France my home. With a diverse background, I hold degrees in both psychology and sociology, alongside my expertise in web development. This unique blend of knowledge allows me to approach projects with a well-rounded perspective, understanding both the technical aspects and the human dynamics involved.
+          </p>
+      </div>
+      <div data-toggle-target="togglableElement" class="additional-content hidden">
+          <p>
+              My journey into the world of coding began when I delved into the realm of accessibility in technology while completing a review of government websites during my sociology degree. Witnessing the power inclusive design had to promote social autonomy, I discovered a passion for coding as a means to create accessible and user-friendly digital experiences.
+              This idea sparked my pursuit of a career in web development, where I could leverage technology to bridge gaps in our communities and make the online world more inclusive. Two years after this, I have received a diploma in Fullstack development and have accrued profound knowledge along the way.
+              Outside of the digital realm, I am an avid traveler, language learner, knitter, and cooking enthusiast. I am also passionate about the environment and am currently on a personal journey to create a more planet-friendly wardrobe through the process of learning to sew and upcycle pre-existing clothes.
+              Beyond my personal interests, I'm deeply committed to promoting diversity and inclusivity in the tech industry. The importance of having a wide range of people bringing with them their own perspectives and lived-experiences provides a unique and valuable richness to the industry. Through my work and passions, I aim to contribute to a world where diverse voices and talents are celebrated and empowered.
+          </p>
+      </div>
+      <button data-action="click->toggle#toggleVisibility" class="toggle-button">See More</button>
   </div>
 
-  <div class="beliefs">
-    <h2>My Beliefs</h2>
+</div>
+
+
+<div data-controller="toggle" class="beliefs">
+  <h2>My Beliefs</h2>
     <div class="belief">
-      <p>
-        <strong>Aesthetics</strong>
-        We all love a pretty site, and I believe aesthetics play a pivotal role in the user experience. My aim is to fashion designs that are not only functional but also visually enticing and representative of the site. Website design is an art, and an aesthetically pleasing user interface is a staple.
-      </p>
       <p>
         <strong>Usability</strong>
         I am dedicated to the principle that technology should be instinctive and effortlessly navigable for the user. My goal is to craft designs that prioritize user-friendliness, ensuring an intuitive journey through the site that allows users to concentrate on content and functionality.
       </p>
-      <p>
-        <strong>Functionality</strong>
-        I advocate for technology that is purposeful and serves a distinct function. My focus is on creating designs that are not just visually appealing but also highly functional, ensuring users can seamlessly engage with the content and features of the site without worrying about the extras.
-      </p>
-      <p>
-        <strong>Accessibility</strong>
-        Technology should be accessible to everyone, and I am committed to developing inclusive digital experiences that cater to all users, regardless of physical or cognitive capabilities. By fostering an environment of equal access for all, we can empower individuals to fully participate in the digital world, ensuring that no one is left behind.
-      </p>
+      <div data-toggle-target="togglableElement" class="additional-content hidden">
+        <p>
+        <strong>Aesthetics</strong>
+        We all love a pretty site, and I believe aesthetics play a pivotal role in the user experience. My aim is to fashion designs that are not only functional but also visually enticing and representative of the site.
+        Website design is an art, and an aesthetically pleasing user interface is a staple.
+        </p>
+
+        <p>
+          <strong>Functionality</strong>
+          I advocate for technology that is purposeful and serves a distinct function. My focus is on creating designs that are not just visually appealing but also highly functional, ensuring users can seamlessly engage with the content and features of the site without worrying about the extras.
+        </p>
+        <p>
+          <strong>Accessibility</strong>
+          Technology should be accessible to everyone, and I am committed to developing inclusive digital experiences that cater to all users, regardless of physical or cognitive capabilities. By fostering an environment of equal access for all, we can empower individuals to fully participate in the digital world, ensuring that no one is left behind.
+        </p>
+      </div>
+      <button data-action="click->toggle#toggleVisibility" class="toggle-button">See More</button>
     </div>
   </div>
 </div>

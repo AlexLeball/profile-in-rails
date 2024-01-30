@@ -1,3 +1,4 @@
+
 @media (max-width: 768px) {
   .information {
     display: flex;
@@ -19,10 +20,26 @@
   .description {
     p {
       font-size: 16px;
+      padding-bottom: 0px;
     }
   }
-}
 
+  .beliefs p {
+    margin: 2px !important;
+  }
+
+  .additional-content.hidden {
+    display: none;
+  }
+
+  .toggle-button {
+    display: block !important;
+    background-color: #f29559;
+    color: white;
+    padding: 5px;
+  }
+
+}
 
 .about {
   font-family: Arial, Helvetica, sans-serif;
@@ -30,6 +47,7 @@
 
 .about-title {
   height: 50px;
+  padding-bottom: 30px !important;
 }
 
 .about h1{
@@ -43,8 +61,7 @@
 .information {
   margin-top: 30px;
   color: #494331;
-  margin-bottom: 20px;
-  display: flex;/* Set the direction to row to place items horizontally *//* Adjust as needed */
+  display: flex;
 }
 
 .information .profilepic {
@@ -53,21 +70,19 @@
   align-items: flex-start; /* Align items to the end of the column */
   border-radius: 4px;
   border: 1px solid #ddd;
-  padding: 10px; /* Add padding for a bit of space around the picture */
+  padding: 10px;
 }
 
 .description p {
   font-size: larger;
-  padding-bottom: 15px;
-  padding: 30px;
+  padding-left: 30px;
 }
-
 
 .beliefs {
   margin-top: 70px;
   color: white;
   background-color: #f29559;
-  padding: 40px;/* Set the direction to row to place items horizontally *//* Adjust as needed */
+  padding: 40px;
 }
 
 .beliefs h2{
@@ -81,4 +96,8 @@
   font-size: larger;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.toggle-button {
+  display: none;
 }
