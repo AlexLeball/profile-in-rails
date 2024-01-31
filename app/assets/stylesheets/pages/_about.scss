@@ -33,7 +33,8 @@
   }
 
   .toggle-button {
-    display: block !important;
+    display: flex !important;
+    justify-content: center;
     background-color: #f29559;
     color: white;
     padding: 5px;
